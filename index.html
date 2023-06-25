@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="css.css"> -->
+	<!-- <link rel="stylesheet" href="team.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="footer.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="hr_animation.css"> -->
+	<script src="https://kit.fontawesome.com/a4490760ee.js" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="icon" type="image" href="images/trasparent black.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Iceberg">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yellowtail">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akaya Telivigala">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<title>Anubis Century</title>
+</head>
+	<style>
+
+  .team-title{
+    color: #9C6625;
+    font-size: 100px;
+    text-align: center;
+    font-family: creepster;
+  }
+  .team-text{
+    color: #9c6625;
+    font-family: Iceberg;
+    font-size: 19px;
+    width: 300px;
+    padding-top: 200px;
+  }
+  .artist-text{
+    padding-top:0px;
+    padding-top: 80px;
+  }
+  .Team .cardo{
+    position: relative;
+  }
+  
+  .Team .cardo .face{
+    width:300px;
+    height: 200px;
+    transition:.4s;
+  }
+  .Team .cardo .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  .Team .cardo:hover .face.face1{
+    transform: translateY(0);
+    box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,
+      -10px 0 80px #f0f,
+      10px 0 80px #0ff;  
+  }
+  .Team .cardo .face.face1 .content{
+    opacity: .2;
+    transition:  0.5s;
+    text-align: center;
+  }
+  .Team .cardo:hover .face.face1 .content{
+    opacity: 1;
+  }
+  .Team .cardo .face .face1 .content h3{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+  }
+  .Team .cardo .face.face2{
+     position: relative;
+     background: transparent;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transform: translateY(-100px);
+  }
+  .Team .cardo:hover .face.face2{
+      transform: translateY(0);
+  }
+.team-image{
+  width:100%;
+  object-fit: cover;
+}
+footer{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: auto;
+}
+
+footer li{
+    list-style: none;
+    margin: 10px;
+    display: inline-block;
+}
+a{
+  font-family: Creepster;
+}
+
+.icons a{
+    background: #CF9D47;
+    color:black;
+    padding: 14px;
+    font-size: 2.5vw;
+    border-radius: 100%;
+    display: flex;
+}
+.icons a:hover{
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.menu a{
+    text-transform: capitalize;
+    font-size: 1.8vw;
+}
+.menu a:hover{
+    transition: 0.5s;
+    padding: 50px;
+}
+
+.footer-copyright{
+    /*background-color:#CF9D47;*/
+    border-top: 1px solid white;
+    color: #CF9D47;
+    padding: 15px;
+    /*margin-top: 30px;*/
+    text-transform: capitalize;
+}
+
+.footer-copyright p{
+    margin-bottom: 0px;
+}
+header{
+  margin: 2em 0 1em;
+  font-size: 12.2px;
+  text-align:center;
+  position:relative;
+}
+
+
+header  hr{
+  display:block;
+  position: absolute;
+  border-top:2px solid #000;
+  z-index:-1;
+  left: 0px;
+  width:100%;
+  margin:0;
+}
+header hr.right{
+  left:auto;
+  right:0px;
+}
+header  hr#thread1{
+  top: 0.8em;
+  -webkit-animation: thread2 10s infinite;
+    -moz-animation:    thread2 10s infinite;
+    -o-animation:      thread2 10s infinite;
+    animation:         thread2 10s infinite;  
+}
+header hr#thread2{
+  top:1.8em;
+  /*right:15px;*/
+  -webkit-animation: thread2 8s infinite;
+    -moz-animation:    thread2 8s infinite;
+    -o-animation:      thread2 8s infinite;
+    animation:         thread2 8s infinite; 
+}
+header hr#thread3{
+  top:2.8em;
+/*  right:15px; */
+  border-color:#b7bf33;
+  -webkit-animation: thread2 6s infinite;
+    -moz-animation:    thread2 6s infinite;
+    -o-animation:      thread2 6s infinite;
+    animation:         thread2 6s infinite; 
+}
+header hr#thread4{
+  top:3.8em;
+  border-color:#b23836;
+  -webkit-animation: thread2 12s infinite;
+    -moz-animation:    thread2 12s infinite;
+    -o-animation:      thread2 12s infinite;
+    animation:         thread2 12s infinite;  
+}
+header hr#thread5{
+  top:4.8em;
+  border-color:#3953a4;
+  -webkit-animation: thread2 16s infinite;
+    -moz-animation:    thread2 16s infinite;
+    -o-animation:      thread2 16s infinite;
+    animation:         thread2 16s infinite;  
+}
+header hr#thread6{
+  top:5.8em;
+  -webkit-animation: thread2 6s infinite;
+    -moz-animation:    thread2 6s infinite;
+    -o-animation:      thread2 6s infinite;
+    animation:         thread2 6s infinite; 
+}
+@media (min-width: 768px) {
+  header{
+    font-size:18px;
+  }
+  h1.site-title a{
+    width:416px;
+    height:120px;
+    margin: 0px auto 0px;
+    text-indent: -9999px;
+    background: url(https://loomweb.co.za/wp-content/themes/starkers/img/loom-logo-2.png) 50% 5px no-repeat;
+  }
+  h1.site-title small{
+    font-size: 35px;
+  }
+  header  hr {
+     border-width:3px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  header  hr {
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  header  hr {
+    
+  }
+}
+@-webkit-keyframes thread2 {
+    0%   { width: 100%; }
+    50% { width: 100%; }
+    80% { width: 0px;}
+    100%{ width:100%;}
+  }
+  @-moz-keyframes thread2 {
+    0%   { width: 100%; }
+    50% { width: 100%; }
+    80% { width: 0px;}
+    100%{ width:100%;}
+  }
+  @-o-keyframes thread2 {
+    0%   { width: 100%; }
+    50% { width: 100%; }
+    80% { width: 0px;}
+    100%{ width:100%;}
+  }
+  @keyframes thread2 {
+    0%   { width: 100%; }
+    50% { width: 100%; }
+    80% { width: 0px;}
+    100%{ width:100%;}
+}
+		body{
+			/*background:linear-gradient(90deg, #1c2e4a,blue,black,blue);*/
+			/*background: #1c2e4a;*/
+			background: black;
+		}
+		.image{
+			/*display: inline;*/
+			width: 85px;
+	}
+		.title{
+			display: inline;
+			color: white;
+			/*font-family: Creepster;*/
+			font-family:Iceberg;
+			font-size: 2vw;
+/*			text-shadow: 1.8px 1.8px ;*/
+			/*margin-left: 20px;*/
+			vertical-align: middle;
+		  /*-webkit-animation: glow 1s ease-in-out infinite alternate;
+		  -moz-animation: glow 1s ease-in-out infinite alternate;
+		  animation: glow 1s ease-in-out infinite alternate;	*/
+		}
+		/*@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #Ffd951, 0 0 30px #Ffd951, 0 0 40px #Ffd951, 0 0 50px #Ffd951, 0 0 60px #Ffd951, 0 0 70px #Ffd951;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ffbb33, 0 0 40px #ffbb33, 0 0 50px #ffbb33, 0 0 60px #ffbb33, 0 0 70px #ffbb33, 0 0 80px #ffbb33;
+  }
+ 
+}*/
+.hover-zoom img, .hover-zoom video {
+    transition: all .3s linear;
+}
+.hover-zoom:hover img, .hover-zoom:hover video {
+    transform: scale(0.95);
+}
+		nav{
+			/*border-bottom: 1px solid white;*/
+			background: rgba(0, 0, 0, 0.9);
+		}
+		li{
+			/*font-family: Comic Sans MS;*/
+			/*font-family: Bahnschrift SemiBold Condensed;*/
+			/*font-family: MESQUITE STD;*/
+			/*font-family:Iceberg;*/
+			margin-left: 25px;
+			letter-spacing: 0.2vw;
+		}
+		ul{
+			margin-left:auto;
+		}
+		.nav-link{
+			/*font-family:Iceberg;*/
+			/*margin-left: 25px;*/
+			letter-spacing: 0.2vw;
+			/*color:#E0C9A6 !important;*/
+			color: #d89f5a !important;
+			font-size: 1.3vw !important;
+			padding-bottom: 0px;
+		}
+		.nav-link:hover{
+			/*color:#ffbb33 !important;*/
+			box-shadow:0px 2px cyan;
+			padding-bottom: 5px;
+		}	
+		.homelogo{
+			text-align: center;
+		}
+		.container{
+			/*background: rgb(22, 28, 32);*/
+			/*height: 50vh;*/
+			padding: 0;
+			position: relative;
+		}
+		.image{
+			width: 5vw;
+		}
+		.text1{
+			font-size: 3vw;
+			font-family:Iceberg;
+	    	color: #E0C9A6;
+		}
+		.text2{
+			color: white;
+			width: 80%;
+			/*background: black;*/
+			margin: auto;
+			text-align:center;
+			font-size: 1.55vw;
+			line-height: 3.5vw;
+			/*font-family: Yellowtail;*/
+			font-family: Akaya Telivigala;
+			letter-spacing: 3px;
+			padding-bottom: 50px;
+		}
+		.text3{
+			color: white;
+			width: 80%;
+			/*background: black;*/
+			margin: auto;
+			text-align:center;
+			font-size: 1.4vw;
+			line-height: 3vw;
+			/*font-family: Yellowtail;*/
+			font-family: Akaya Telivigala;
+			letter-spacing: 1px;
+			padding-bottom: 50px;
+		}
+		.navbar-toggler{
+			border:2px solid #E0C9A6 !important ;
+			background: #E0C9A6;
+			font-size: 1.5vw;
+			
+		}
+		.container2{
+			color: white;
+			font-size: 30px;
+			letter-spacing: 5px;
+		}
+		.imgsec{
+			display:block;
+			width: 8vw;
+			position: absolute;
+		}
+		.left-top{
+			top: 0;
+			left: 0;
+		}
+		.right-top{
+			top: 0;
+			right: 0;
+		}
+		.left-bottom{
+			bottom: 0;
+			left: 0;
+		}
+		.right-bottom{
+			bottom: 0;
+			right: 0;
+		}
+		div.header{
+		/*min-height: 100vh;*/
+		margin-top: 100px;
+		}
+		.gif-image{
+			margin-top: 1%;
+		}
+		.first-image{
+				width: 80vw;
+
+			}
+		@media (max-width: 1800px){
+			/*.first-image{
+				width: 5vw;
+				height: 5vw;
+			}*/
+		}
+		@media (max-width: 1565px){
+			/*.first-image{
+				width: 400px;
+			}*/
+		}
+		@media (max-width: 1260px){
+			/*.first-image{
+				width: 300px;
+			}*/
+		}
+		@media (max-width: 960px){
+			/*.first-image{
+				width: 250px;
+			}*/
+			.image{
+			width: 12vw;
+		}
+		}
+		@media (max-width: 810px){
+			/*.first-image{
+				width: 220px;
+			}*/
+			.container{
+				max-width: 560px;
+			}
+			
+
+		}
+		@media (max-width: 700px){
+			/*.first-image{
+				width: 180px;
+			}*/
+			.container{
+				max-width: 500px;
+			}
+			.image{
+			width: 12vw;
+		}
+		.icons a{
+			font-size:3vw;
+		} 
+		}
+		@media (max-width: 597px){
+			.image{
+			width: 12vw;
+		}
+			/*.first-image{
+				width: 120px;
+			}*/
+			.container{
+				max-width: 300px;
+			}
+			.text1{
+				font-size: 5vw;
+			}
+			.text2{
+				font-size: 3vw;
+			}
+			.text3{
+				font-size: 3vw;
+			}
+			.title{
+				font-size: 3.8vw;
+
+			}
+			.nav-link{
+				font-size: 3vw !important;
+			}
+			.navbar-toggler{
+				font-size: 3vw;
+			}
+			.nav-link:hover{
+			padding-bottom: 0px;
+			letter-spacing: 2px;
+		}	
+		.icons a{
+			font-size:4vw;
+		} 
+		.menu a{
+			font-size: 4vw;
+		}
+
+		}
+		@media (max-width: 416px){
+			/*.first-image{
+				width: 90px;
+			}*/
+			.container{
+				max-width: 250px;
+			}
+			.image{
+			width: 12vw;
+			}
+           .text1{
+           	font-size: 4vw;
+           }
+           .text2{
+           	font-size: 3vw;
+           }
+           .text3{
+           	font-size: 3vw;
+           }
+           .title{
+           	font-size: 3.8vw;
+
+           }
+           .nav-link{
+           	font-size: 3vw !important;
+           }
+           .navbar-toggler{
+           	font-size: 3vw;
+           }
+           .nav-link:hover{
+			padding-bottom: 0px;
+			letter-spacing: 1px;
+		}
+		.icons a{
+			font-size:6vw;
+		}
+		}
+
+		.roadmapImage{
+			width: 50vw;
+		}
+		.uti-image{
+			width: 100%;
+		}
+		.utiImage{
+			width: 35vw;
+			/*height: 60vw;*/
+		}
+		/*.container-text3{
+			width: 40%;
+			height: 50vw;
+			overflow-y: auto;
+		}*/
+		.lastimage1{
+			width: 45vw;
+		}
+		a{
+			text-decoration: none;
+		}
+		.coming{
+			font-size: 5vw;
+			margin-top:15vw;
+		}
+	</style>
+	<body>
+		
+	<nav class="navbar navbar-light navbar-expand-lg sticky-top">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#"><img class="image" src="images/new-logo.jpg"><p class="title mx-2">ANUBIS CENTURY</p></a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNav">
+	      <ul class="navbar-nav align-items-center">
+	        <li class="nav-item">
+	          <a class="nav-link" aria-current="page" href="#">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#Roadmap">Roadmap</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#Utility">Utility</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#Team">Team</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="comingsoon.html" target="_blank">Raffle Shop</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="comingsoon.html" target="_blank">Anubis Shop</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div> 
+	</nav>
+		<div class="homelogo">
+			<div class="header d-flex flex-row mt-2 pt-0 justify-content-center">
+				<div class="hover-zoom" data-aos="flip-right"><img class="first-image" src="images/story.png"></div>
+				<!-- <div class="hover-zoom" data-aos="flip-left"><img  class="first-image mx-2" src="images/p1.png"></div>
+				<div class="hover-zoom" data-aos="flip-up"><img  class="first-image mx-2" src="images/p2.png"></div>
+				<div class="hover-zoom" data-aos="flip-right"><img  class="first-image mx-2" src="images/p3.png"></div> -->
+				<!-- <img  class="first-image mx-2" src="images/p2.png">
+				<img  class="first-image mx-2" src="images/p3.png"> -->
+			</div>
+				
+			<div class="container mt-2 mb-5" data-aos="zoom-in-down">
+				<img src="images/1.png" class="imgsec left-top">
+				<img src="images/2.png" class="imgsec right-top">
+				<img src="images/3.png" class="imgsec left-bottom">
+				<img src="images/4.png" class="imgsec right-bottom">
+			<div class="wrapper">
+	        <div>
+	          <div class="leelee text1">Story</div>
+	        </div>
+  			</div>
+				<!-- <p class="text1 pt-2" >Story</p> -->
+				<p class="text2">Anubis was a god of mummification and the afterlife. Represented as an anthropomorphized jackal, Anubis oversaw mummification, weighed souls, guided the dead into the afterlife, defended against chaos, and punished those who violated tombs.
+				Anubis is now coming back into the Solana blockchain to defend who against chaos .</p> <p id="Roadmap"></p>
+
+				<header class="mt-0 pb-2 d-block d-sm-none ">
+				<hr id="thread3" class="right">
+				</header>
+			</div>
+
+		
+			<div class="d-flex flex-column flex-sm-row mb-5">
+				<div class="roadmap-image" data-aos="flip-left"><img class="roadmapImage" src="images/roadmap.png" data-aos="flip-left"></div>
+				<div class="container me-none me-lg-5" data-aos="flip-right">
+				<img src="images/1.png" class="imgsec left-top">
+				<img src="images/2.png" class="imgsec right-top">
+				<img src="images/3.png" class="imgsec left-bottom">
+				<img src="images/4.png" class="imgsec right-bottom">
+				<!-- <p class="text1 pt-2">Roadmap</p> -->
+				<div class="wrapper">
+	        <div>
+	          <div class="leelee text1">Roadmap</div>
+	        </div>
+  			</div>
+  			
+				<p class="text2">
+					 Gen 0  
+							Stage 1. Build Community to love community. <br><br>
+							Stage 2. Gas fee distribution to WL and OG. <br><br>
+							Stage 3. Gen 0 Mint Process  <br><br>
+							Stage 4. Web 3 Shop Beta Version <br><br>
+							Stage 5. Royalties fee share to whales
+				</p>
+				<p id="Utility"></p> 
+				<header class="mt-0 pb-2 d-block d-sm-none ">
+				<hr id="thread3" class="right">
+				</header>
+			</div>
+		</div>
+
+		<div class="d-flex flex-column flex-sm-row"  >
+
+			<div class="uti-image mx-auto pb-3 d-lg-none d-xl-none d-xs-block d-sm-block d-md-none"><img class="utiImage lastimage1" src="images/utility.gif" data-aos="flip-left"></div>
+
+			<div class="container container-text3 mt-xs-0 mt-sm-0 ms-sm-0 ms-md-5 w-100" data-aos="flip-right" >
+				<img src="images/1.png" class="imgsec left-top">
+				<img src="images/2.png" class="imgsec right-top">
+				<img src="images/3.png" class="imgsec left-bottom">
+				<img src="images/4.png" class="imgsec right-bottom">
+				<!-- <p class="text1 pt-2">Utility</p> -->
+				<div class="wrapper">
+	        <div>
+	          <div class="leelee text1 ">Utility</div>
+	        </div>
+  			</div>
+				<p class="text3 text-align-left mt-md-5">
+						Gen 0 holders will get Mint price discount on Gen 1 collection minting.We will make a announcement about the detail of mint price discount plan.
+- 70% of Royalty fee will be distributed to Gen 0 Holders and 30% will distribute back to Anubis Century Team members.
+-$AC Coin staking
+- Early access to Anubis Century Market place like Alibaba & Lazada,Shop.com, you can buy in Crypto (USDT or $AC).Gen 0 Holder will become the Beta Tester.
+
+- Free gift return of our Super limited edition physical products (Supply 10-50) to Gen 0 Holders.
+				</p> <p id="Team"></p>
+			</div>
+
+			<div class="uti-image mt-5 pt-none pt-md-4 d-none d-sm-none d-lg-block d-xl-block d-md-block"><img class="utiImage gif-image" src="images/utility.gif" data-aos="flip-right"></div>
+		</div>
+	</div>
+	<header class="mt-0  ">
+				<hr id="thread3" class="right">
+	</header>
+	<div class="Team row mt-5 pt-4 ms-auto me-auto ">
+		<p class="team-title mb-5 pb-2">Team</p>
+
+		  <div class="col cardo mb-5 pb-5" align="center">
+		    <div class="face face1">
+		      <img class="team-image" src="images/founder.png" alt="">
+		    </div>
+		    <div class="face face2">
+		      <div class="content">
+		        <p class="team-text">During the days, he worked as a Sales and Marketing Assistant Manager at Uniliver around 3 years, and then he led his life as a Crypto Trader. He entered the NFT industry in early August 2021.</p>
+		        <!-- <a href="#" type="button"></a> -->
+		      </div>
+          <br>
+		    </div>
+		 </div>
+
+		 <div class="col cardo mb-5 pb-5" align="center">
+		    <div class="face face1">
+		      <img class="team-image" src="images/co-founder.png" alt="">
+		    </div>
+		    <div class="face face2">
+		      <div class="content">
+		        <p class="team-text ">John W - Experienced Co founder & Project Advisor in many projects in various blockchain.A whale of Crypto currency and collector of Sol NFT .</p>
+		        <!-- <a href="#" type="button"></a> -->
+		      </div>
+          <br>
+		    </div>
+		 </div>
+		  
+		 <div class="col cardo mb-5 pb-5" align="center">
+		    <div class="face face1 ">
+		      <img class="team-image" src="images/artist.png" alt="">
+		    </div>
+		    <div class="face face2">
+		      <div class="content">
+		        <p class="team-text artist-text">I’m just an ARTIST.</p>
+		        <!-- <a href="#" type="button"></a> -->
+		      </div>
+		    </div>
+		 </div>
+		 
+		 
+		 <div class="col cardo mb-5 pb-5" align="center">
+		    <div class="face face1">
+		      <img class="team-image" src="images/developer.png" alt="">
+		    </div>
+		    <div class="face face2">
+		      <div class="content">
+		        <p class="team-text artist-text">Wed 3 expected in Myanmar.</p>
+		        <!-- <a href="#" type="button">Read More</a> -->
+		      </div>
+		    </div>
+		 </div>
+	</div>
+	</body>
+	<footer class="pt-5 mt-5">
+        <ul class="icons p-0 m-0  mb-0 pb-0">
+            <li class="m-0 p-0"><a href="https://discord.com/invite/cemJqEVjP2" onMouseOver="this.style.color='#7289da'"    onMouseOut="this.style.color='black'" target="_blank"><ion-icon name="logo-discord"></ion-icon></a></li>
+            <li class="m-0 p-0 ps-2"><a href="https://twitter.com/Anubis1795?t=No4lSgAH-ScH9t7WrTJm5g&s=09" onMouseOver="this.style.color='#00acee'" onMouseOut="this.style.color='black'" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        </ul>
+        <ul class="menu p-0 mb-0" >
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a style="color:#CF9D47" href="#Roadmap">ROADMAP</a></li>
+                <li><a style="color:#CF9D47" href="#Utility">UTILITY</a></li>
+                <li><a style="color:#CF9D47" href="#Team">TEAM</a></li>
+                <li><a style="color:#CF9D47" href="comingsoon.html" target="_blank">ANUBIS SHOP</a></li>
+                <!-- <li><a href="#">WATCH TO EARN</a></li> -->
+        </ul>
+            <div class="footer-copyright">
+                <p>Copyright @ 2022 All Rights Reserved.</p>
+            </div>
+    </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
